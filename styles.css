@@ -25,11 +25,13 @@ a:hover {
 
 .main-nav {
   width: 100%;
-  background: #00CCCC;
+  background: #cc0068;
   min-height: 30px;
   padding: 10px;
   position: fixed;
   text-align: center;
+  border-bottom: 2px solid #ffffcc;
+  z-index: 1;
 }
 .nav {
   display: flex;
@@ -55,13 +57,14 @@ a:hover {
   color: white
 }
 
-header {
+.main-page header{
   text-align: center;
-  background: url('images/hongkong.jpg') no-repeat top center ;
+  background: url('images/hk.jpg') no-repeat top center ;
   background-size: cover;
   overflow: hidden;
   padding-top: 60px;
 }
+
 header {
   line-height: 1.5;
 }
@@ -70,23 +73,23 @@ header .profile-image {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #CCFFFF;
-  transition: all .5s;
+  border: 3px solid #ffffcc;
+  transition: all .4s;
 }
 header .profile-image:hover {
   transform: scale(1.3) rotate(5deg);
 }
 .tag {
-  background-color: #CCFFFF;
-  color: #00CCCC;
+  background-color: #f7f5f0;
+  color: #464179;
   padding: 10px;
   border-radius: 10px;
   display: table;
   margin: 10px auto;
 }
 .location {
-  background-color: white;
-  color: #99CCFF;
+  background-color: #f5cfcd;
+  color: #464179;
 }
 .card {
   margin: 30px;
@@ -99,7 +102,7 @@ header .profile-image:hover {
   transition: all .5s;
 }
 .card:hover {
-  border-color: #00CCCC;
+  border-color: #cc0068;
 }
 
 ul.skills {
@@ -110,20 +113,21 @@ ul.skills {
 .skills li {
   border-radius: 6px;
   display: inline-block;
-  background: #ff9904;
+  background: #66cc00;
   color: white;
   padding: 5px 10px;
   margin: 2px;
 }
 
 .skills li:nth-child(odd) {
-  background: #0399ff;
+  background: #6f33ff;
 }
 
 footer {
   width: 100%;
   min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px 20px 40px 20px;
+  clear: both;
 }
 
 footer .copyright {
@@ -162,6 +166,151 @@ a.social:hover {
   clear: both;
 }
 
+.about-page header{
+  text-align: left;
+  background: url('images/about.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.button {
+  margin-top: 50px;
+  padding-top: 50px;
+  margin-left: 8%;
+  padding-bottom: 5px;
+}
+
+.favorite {
+  color:#ffffcc;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+header .movies {
+  background: url('images/movie.jpg') no-repeat top center ;
+  background-size: cover;
+  display: inline-block;
+  padding-top: 10px;
+  width: 80px;
+  height: 80px;
+  border: 2.5px solid #eef9ff;
+  transition: all .4s;
+  opacity: .7;
+}
+
+header .cities {
+  background: url('images/city.jpg') no-repeat top center ;
+  background-size: cover;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 2.5px solid #eef9ff;
+  transition: all .4s;
+  opacity: .7;
+}
+
+header .movies:hover, .cities:hover {
+  opacity: 1;
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.items {
+  clear: both;
+}
+
+.items h1 {
+  display: inline-block;
+  padding-top: 30px;
+  border-bottom: 3px solid #000;
+}
+
+.items ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.items li {
+  float: left;
+  background-color: #f5f5f5;
+}
+
+.movie li {
+  width: 40%;
+  margin: 5%;
+}
+
+img {
+  width: 100%;
+}
+
+.items p {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 5%;
+  color: #bdc3c7;
+  line-height: 1;
+}
+
+.city .image {
+  background-size: cover;
+  padding-top: 70%;
+  width: 100%;
+}
+
+.city li {
+  width: 40%;
+  margin: 5%;
+}
+
+
+
+.venice {
+  background-image: url('images/venice_italy.jpg');
+}
+
+.rome {
+  background-image: url('images/rome_italy.jpg');
+}
+
+.vienna {
+  background-image: url('images/vienna_austria.jpg');
+}
+
+.paris {
+  background-image: url('images/paris_france.jpg');
+}
+
+.barcelona {
+  background-image: url('images/barcelona_spain.jpg');
+}
+
+.stpetersburg {
+  background-image: url('images/stpetersburg_russia.jpg');
+}
+
+.newyork {
+  background-image: url('images/newyork_us.jpg');
+}
+
+.london {
+  background-image: url('images/london_uk.jpg');
+}
+
+@media screen and (max-width: 719px) {
+  .movie li:nth-child(2n+1) {
+    clear: left;
+  }
+  .city li:nth-child(2n+1) {
+    clear: left;
+  }
+}
+
 /* Styles for larger screens */
 @media screen and (min-width: 720px) {
 
@@ -196,6 +345,56 @@ a.social:hover {
     font-size: 1.3em;
     max-width: 1200px;
     margin: 40px auto;
+  }
+
+  .favorite {
+    font-size: 2em;
+  }
+
+  .button {
+    padding-bottom: 0;
+  }
+
+  header .movies {
+    background: url('images/movie.jpg') no-repeat top center ;
+    background-size: cover;
+    display: block;
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    border: 2.5px solid #eef9ff;
+    transition: all .4s;
+    opacity: .7;
+  }
+
+  header .cities {
+    background: url('images/city.jpg') no-repeat top center ;
+    background-size: cover;
+    display: block;
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    border: 2.5px solid #eef9ff;
+    transition: all .4s;
+    opacity: .7;
+  }
+
+  .movie li {
+    width: 20%;
+    margin: 2.5%;
+  }
+
+  .movie li:nth-child(4n+1) {
+    clear: left;
+  }
+
+  .city li {
+    width: 28.3333%;
+    margin: 2.5%;
+  }
+
+  .city li:nth-child(3n+1) {
+    clear: left;
   }
 
 }
