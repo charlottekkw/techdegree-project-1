@@ -223,7 +223,7 @@ header .movies:hover, .cities:hover {
   clear: both;
 }
 
-.items h1 {
+.items h2 {
   display: inline-block;
   padding-top: 30px;
   border-bottom: 3px solid #000;
